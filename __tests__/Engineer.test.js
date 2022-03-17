@@ -1,14 +1,23 @@
 const Engineer = require('../lib/Engineer');
 
-test('gets engineer GitHub username', () => {
-    const engineer = new Engineer('perfect-perfect');
+test('Creates engineer object', () => {
+    const engineer = new Engineer('gil', '2', 'gil@gmail.com', 'perfect-perfect');
 
-    expect(engineer.username).toBe('perfect-perfect');
+    expect(engineer.name).toBe('gil');
+    expect(engineer.id).toBe('2');
+    expect(engineer.email).toBe('gil@gmail.com');
+    expect(engineer.special).toBe('perfect-perfect');
 })
+
+// test('gets engineer GitHub username', () => {
+//     const engineer = new Engineer('perfect-perfect');
+
+//     expect(engineer.username).toBe('perfect-perfect');
+// })
 
 // not sure what getGithub is suppose to do
 test('gets GitHub', () => {
-    const engineer = new Engineer('perfect-perfect');
+    const engineer = new Engineer('gil', '2', 'gil@gmail.com', 'perfect-perfect');
 
     expect(engineer.getGithub()).toEqual(expect.stringContaining('https://github.com/perfect-perfect'))
 })

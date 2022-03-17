@@ -251,10 +251,10 @@ const promptUser = () => {
                         chooseRole();
                     })
 
-                    console.log('you chose an Engineer')
                 break;
                 case 'Render':
-                  teamRender()
+                  teamRender();
+                  cssRender();
                 break;
             }
         })
@@ -266,10 +266,19 @@ const promptUser = () => {
     function teamRender(){
         fs.writeFile('./dist/index.html', generatePage(myTeam), err => {
             if (err) throw err;
-            console.log('success!');
+            console.log('html success!');
         })
     }
 
+    function cssRender(){
+        fs.copyFile('./src/style.css', './dist/style.css' , err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            console.log('css success!');
+        });
+    };
 
     // function teamRender(){
     //     if (!fs.existsSync('./dist')) {
