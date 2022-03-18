@@ -15,11 +15,11 @@ test('Creates engineer object', () => {
 //     expect(engineer.username).toBe('perfect-perfect');
 // })
 
-// not sure what getGithub is suppose to do
+// Get GitHub
 test('gets GitHub', () => {
     const engineer = new Engineer('gil', '2', 'gil@gmail.com', 'perfect-perfect');
 
-    expect(engineer.getGithub()).toEqual(expect.stringContaining('https://github.com/perfect-perfect'))
+    expect(engineer.getSpecial()).toEqual(expect.stringContaining('https://github.com/perfect-perfect'))
 })
 
 // getRole() test
