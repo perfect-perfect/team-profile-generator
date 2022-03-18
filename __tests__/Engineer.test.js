@@ -9,11 +9,6 @@ test('Creates engineer object', () => {
     expect(engineer.special).toBe('perfect-perfect');
 })
 
-// test('gets engineer GitHub username', () => {
-//     const engineer = new Engineer('perfect-perfect');
-
-//     expect(engineer.username).toBe('perfect-perfect');
-// })
 
 // Get GitHub
 test('gets GitHub', () => {

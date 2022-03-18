@@ -1,43 +1,10 @@
-// Here i genereate the HTML
-
-// i am going to jave to cycle through the employees i created to create their cards
-// no idea how i will do this
-
-// issue: i believe that map functions is screwing up because we are going through and array of objects, so these variables are attaching themselves to the objects, not the properties
-// const generateEmployees = employeeArr => {
-//     // console.log('this is from generateEmployee:',employeeArr)
-//     return `
-//         <section class="my-3" id="portfolio">
-//             <h2 class="text-dark bg-primary p-2 display-inline-block">Work</h2>
-//             <div class="flex-row justify-space-between">
-//             ${employeeArr.forEach(element => {
-//                     console.log('This from employeeArr:', element)
-//                     return `
-//                     <div class="col-12 col-md-6 mb-2 bg-dark text-light p-3 flex-column">
-//                         <h3 class="portfolaio-item-title text-light">${element.name}</h3>
-//                         <h5 class="portfolio-languages">
-//                             ${element.getRole()}
-//                         </h5>
-//                         <p>${element.email}</p>
-//                         <p>${element.special}</p>
-//                         <p>${element.id}</p>
-//                     </div>
-//                     `;
-//             })
-//             }
-
-//         </section>    
-//     `;
-// };
-
+// Here i genereate the HTML and cycle through the array to create the cards
 const generateEmployees = employeeArr => {
-    // console.log('this is from generateEmployee:',employeeArr)
     return `
         <section class="my-3">
             <h2 class="text-dark bg-primary p-2 display-inline-block">My Team</h2>
             <div class="flex-row justify-space-between">
             ${employeeArr.map((worker) => {
-                    // console.log('This from employeeArr:', element)
                     return `
                     <div class="col-12 col-md-6 mb-2 bg-dark text-light p-3 flex-column">
                         <h3 class="text-light">${worker.name}</h3>
@@ -56,10 +23,6 @@ const generateEmployees = employeeArr => {
         </section>    
     `;
 };
-        
-
-
-// name, id, email, special, role
 
 
 module.exports = templateData => {
